@@ -20,6 +20,7 @@ def histogram(text_file):
     '''
     histogram = dict()
     for word in text_file:
+        print(word)
         if word not in histogram:
             histogram[word] = 1
         else:
@@ -46,8 +47,8 @@ def frequency(word, histogram):
     return histogram[word]
 
 if __name__ == '__main__':
-    words = get_text_words('source_text.txt')
+    words = get_text_words('words.txt')
     histogram = histogram(words)
     print(repeated_words(histogram))
-    print(unique_words(histogram))
+    # print(unique_words(histogram))
     print(frequency("of", histogram))
